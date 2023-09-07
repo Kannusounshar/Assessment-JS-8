@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   <!-- 1.Write a program that takes two numbers as input and swaps their values using a third variable. Display the new values of both numbers after the swap.
+
+      // let num1 = parseFloat(prompt("Enter the first number:"));
+
+      // let num2 = parseFloat(prompt("Enter the second number:"));
+
+      // let temp = num1;
+
+      // num1 = num2;
+
+      // num2 = temp;
+
+      // console.log(`After swapping: First number = ${num1}, Second number = ${num2}`);
+      let num1 = parseFloat(prompt("Enter the first number:"));
+      let num2 = parseFloat(prompt("Enter the second number:"));
+
+      let temp = num1;
+      num1 = num2;
+      num2 = temp;
+
+      console.log(
+        `After swapping: First number = ${num1}, Second number = ${num2}`
+      );
+
+      // 2.Create a program that takes a user's age as input. If the age is between 13 and 19 (inclusive), display "You are a teenager." Otherwise, display "You are not a teenager."
+
+      // let age = parseInt(prompt("Enter your age:"));
+
+      // if (age < 12) {
+
+      //   console.log("You are a child.");
+
+      // } else if (age >= 12 && age <= 19) {
+
+      //   console.log("You are a teenager.");
+
+      // } else {
+
+      //   console.log("You are an adult.");
+
+      // }
+      let age = parseInt(prompt("Enter your age:"));
+
+      if (age < 12) {
+        console.log("You are a child.");
+      } else if (age >= 12 && age <= 19) {
+        console.log("You are a teenager.");
+      } else {
+        console.log("You are an adult.");
+      }
+
+      // 3.Given three sides of a triangle (sideA, sideB, sideC), write a program that determines whether it's an equilateral, isosceles, or scalene triangle. Display the type of triangle based on the input.
+
+      // let sideA = parseFloat(prompt("Enter the length of side A:"));
+
+      // let sideB = parseFloat(prompt("Enter the length of side B:"));
+
+      // let sideC = parseFloat(prompt("Enter the length of side C:"));
+
+      // if (sideA === sideB && sideB === sideC) {
+
+      //   console.log("Equilateral Triangle");
+
+      // } else if (sideA === sideB || sideB === sideC || sideA === sideC) {
+
+      //   console.log("Isosceles Triangle");
+
+      // } else {
+
+      //   console.log("Scalene Triangle");
+
+      // }
+      let sideA = parseFloat(prompt("Enter the length of side A:"));
+      let sideB = parseFloat(prompt("Enter the length of side B:"));
+      let sideC = parseFloat(prompt("Enter the length of side C:"));
+
+      if (sideA === sideB && sideB === sideC) {
+        console.log("Equilateral Triangle");
+      } else if (sideA === sideB || sideB === sideC || sideA === sideC) {
+        console.log("Isosceles Triangle");
+      } else {
+        console.log("Scalene Triangle");
+      }
+
+      // 4.Create a function calculatePower that takes a base number and an exponent as arguments and calculates the result of base raised to the power of exponent(without using function).
+
+      // let base = parseFloat(prompt("Enter the base number:"));
+
+      // let exponent = parseFloat(prompt("Enter the exponent:"));
+
+      // let result = Math.pow(base, exponent);
+
+      // console.log("Result:", result);
+      function calculatePower(base, exponent) {
+        let result = 1;
+
+        for (let i = 0; i < exponent; i++) {
+          result *= base;
+        }
+
+        return result;
+      }
+
+      let base = parseFloat(prompt("Enter the base number:"));
+      let exponent = parseFloat(prompt("Enter the exponent:"));
+
+      let result = calculatePower(base, exponent);
+
+      console.log("Result:", result);
+
+      // 5.Write a program that prompts the user for a number and checks if it's even or odd. Display "Even" if the number is even, and "Odd" if it's odd.
+
+      // let number = parseInt(prompt("Enter a number:"));
+
+      // if (number % 2 === 0) {
+
+      //   console.log("Even");
+
+      // } else {
+
+      //   console.log("Odd");
+
+      // }
+      let number = parseInt(prompt("Enter a number:"));
+
+      if (number % 2 === 0) {
+        console.log("Even");
+      } else {
+        console.log("Odd");
+      }
+
+      // 6.Create a program that takes a year as input and determines if it's a leap year or not. Display "Leap year" if it's a leap year, otherwise "Not a leap year."
+
+      // let year = parseInt(prompt("Enter a year:"));
+
+      // if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+
+      //   console.log("Leap year");
+
+      // } else {
+
+      //   console.log("Not a leap year");
+
+      // }
+      let year = parseInt(prompt("Enter a year:"));
+
+      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        console.log("Leap year");
+      } else {
+        console.log("Not a leap year");
+      }
+
+      // 7.Write a program that takes the length of three sides of a triangle as input and determines whether it forms a valid triangle. A valid triangle must satisfy the triangle inequality theorem: the sum of the lengths of any two sides must be greater than the length of the third side.
+
+      // let sideA = parseFloat(prompt("Enter the length of side A:"));
+
+      // let sideB = parseFloat(prompt("Enter the length of side B:"));
+
+      // let sideC = parseFloat(prompt("Enter the length of side C:"));
+
+      // if ((sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA)) {
+
+      //   console.log("Valid triangle");
+
+      // } else {
+
+      //   console.log("Not a valid triangle");
+
+      // }
+      let sideA = parseFloat(prompt("Enter the length of side A:"));
+      let sideB = parseFloat(prompt("Enter the length of side B:"));
+      let sideC = parseFloat(prompt("Enter the length of side C:"));
+
+      if (
+        sideA + sideB > sideC &&
+        sideA + sideC > sideB &&
+        sideB + sideC > sideA
+      ) {
+        console.log("Valid triangle");
+      } else {
+        console.log("Not a valid triangle");
+      }
+
+      // 8.Create a function calculateFactorial that takes a positive integer as an argument and returns its factorial value.
+
+      // let n = parseInt(prompt("Enter a positive integer:"));
+
+      // let factorial = 1;
+
+      // for (let i = 1; i <= n; i++) {
+
+      //   factorial *= i;
+
+      // }
+
+      // console.log("Factorial:", factorial);
+      function calculateFactorial(n) {
+        if (n < 0) {
+          return "Invalid input: Please enter a positive integer.";
+        }
+
+        let factorial = 1;
+
+        for (let i = 1; i <= n; i++) {
+          factorial *= i;
+        }
+
+        return factorial;
+      }
+
+      // Example usage:
+      // Replace '5' with the positive integer you want to calculate the factorial of.
+      const inputNumber = 5;
+      const factorialResult = calculateFactorial(inputNumber);
+      console.log("Factorial:", factorialResult);
+
+      // 9.Given a string, write a program that checks if it's a palindrome. Ignore spaces and punctuation while considering palindromes. Return true if it's a palindrome, otherwise false.
+
+      // let inputString = prompt("Enter a string:");
+
+      // inputString = inputString.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+      // if (inputString === inputString.split('').reverse().join('')) {
+
+      //   console.log("Palindrome");
+
+      // } else {
+
+      //   console.log("Not a palindrome");
+
+      // }
+      function isPalindrome(inputString) {
+        // Remove spaces and punctuation and convert to lowercase
+        inputString = inputString.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+
+        // Check if the modified string is equal to its reverse
+        return inputString === inputString.split("").reverse().join("");
+      }
+
+      // Example usage:
+      // Replace 'inputString' with the string you want to check for palindrome.
+      const inputString = "A man, a plan, a canal, Panama";
+      const isPalindromeResult = isPalindrome(inputString);
+
+      if (isPalindromeResult) {
+        console.log("Palindrome");
+      } else {
+        console.log("Not a palindrome");
+      }
+
+      // 20.Write a program that takes a user's age as input. If the age is less than 12, display "You are a child." If the age is between 12 and 19 (inclusive), display "You are a teenager." If the age is 20 or older, display "You are an adult."
+
+      // let age = parseInt(prompt("Enter your age:"));
+
+      // if (age < 12) {
+
+      //   console.log("You are a child.");
+
+      // } else if (age >= 12 && age <= 19) {
+
+      //   console.log("You are a teenager.");
+
+      // } else if (age >= 20) {
+
+      //   console.log("You are an adult.");
+
+      // }
+      let ageInput = prompt("Enter your age:");
+      let age = parseInt(ageInput);
+
+      if (isNaN(age)) {
+        console.log("Invalid input. Please enter a valid number for your age.");
+      } else {
+        if (age < 12) {
+          console.log("You are a child.");
+        } else if (age >= 12 && age <= 19) {
+          console.log("You are a teenager.");
+        } else {
+          console.log("You are an adult.");
+        }
+      }
+    </script>
+  </body>
+</html>
